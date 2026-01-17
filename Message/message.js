@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const axios = require('axios');
 const config = require('../Alicia/alicia');
 const bot = new Telegraf(config.botToken);
+bot.use(require('telegraf/session').session());
 
 function rainbowLog(text) {
   const colors = [
